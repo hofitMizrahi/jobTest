@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.user.moviestesthofitmizrahi.fragments.DetailsFragment;
 import com.example.user.moviestesthofitmizrahi.fragments.ListFragment;
 import com.example.user.moviestesthofitmizrahi.interfaces.ChangeFragmentService;
 import com.example.user.moviestesthofitmizrahi.moviesDatabase.MoviesTable;
@@ -34,14 +35,13 @@ public class MainActivity extends AppCompatActivity implements ChangeFragmentSer
 
             ((ImageView)findViewById(R.id.go_IV)).setVisibility(View.INVISIBLE);
         });
-
-
     }
 
     @Override
     public void changeFragments(MoviesTable movie) {
 
-
+        DetailsFragment detailsFragment = new DetailsFragment();
+        getFragmentManager().beginTransaction().replace(R.id.go_main_layout, detailsFragment).commit();
     }
 
     @Override
@@ -49,5 +49,10 @@ public class MainActivity extends AppCompatActivity implements ChangeFragmentSer
 
         listFragment = new ListFragment();
         getFragmentManager().beginTransaction().replace(R.id.go_main_layout, listFragment).commit();
+    }
+
+    @Override
+    public void changeToQRFragment() {
+
     }
 }

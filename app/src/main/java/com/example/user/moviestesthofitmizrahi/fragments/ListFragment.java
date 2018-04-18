@@ -1,15 +1,20 @@
 package com.example.user.moviestesthofitmizrahi.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.user.moviestesthofitmizrahi.QRActivity;
 import com.example.user.moviestesthofitmizrahi.R;
+import com.example.user.moviestesthofitmizrahi.interfaces.ChangeFragmentService;
+import com.google.zxing.integration.android.IntentIntegrator;
 
 public class ListFragment extends Fragment {
 
@@ -30,6 +35,14 @@ public class ListFragment extends Fragment {
         //setting txt adapter
         RecyclerAdapter Adapter = new RecyclerAdapter(getActivity());
         recyclerView.setAdapter(Adapter);
+
+        (v.findViewById(R.id.addNewQR)).setOnClickListener((View view)->{
+
+            Log.i("test", "buttom test");
+            Intent intent = new Intent(getActivity(), QRActivity.class);
+            startActivity(intent);
+
+        });
 
         return v;
 

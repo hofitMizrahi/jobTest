@@ -11,4 +11,6 @@ public interface ChangeFragmentService {
     void changeFragments(MoviesTable movie);
 
     void changeToListFragment();
+
+    void changeToQRFragment();
 }
