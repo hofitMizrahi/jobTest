@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.widget.Toast;
 
-import com.example.user.moviestesthofitmizrahi.interfaces.ChangeFragmentService;
 import com.example.user.moviestesthofitmizrahi.interfaces.GitHubService;
 import com.example.user.moviestesthofitmizrahi.model.Movie;
 import com.example.user.moviestesthofitmizrahi.moviesDatabase.MoviesTable;
@@ -60,8 +59,6 @@ public class MoviesServiceProvider {
                 pd.dismiss();
 
                 // go to list fragment
-                ChangeFragmentService service = (ChangeFragmentService) context;
-                service.changeToListFragment();
             }
 
             @Override

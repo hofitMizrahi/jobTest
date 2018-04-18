@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.user.moviestesthofitmizrahi.interfaces.ChangeFragmentService;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -52,8 +51,15 @@ public class QRActivity extends AppCompatActivity{
             Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
 
             // go to list fragment
-            ChangeFragmentService service = (ChangeFragmentService) this;
-            service.changeToListFragment();
+            Intent intent=new Intent();
+            intent.putExtra("MESSAGE", result.getContents());
+            setResult(2,intent);
+            finish();//finishing activity
+
+        }else {
+
+            finish();//finishing activity
+
         }
 
     }
