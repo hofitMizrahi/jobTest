@@ -5,6 +5,10 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Json Movie Model Class
+ */
+
 public class Movie {
 
     @SerializedName("title")
@@ -17,11 +21,11 @@ public class Movie {
 
     @SerializedName("rating")
     @Expose
-    private Double rating;
+    private double rating;
 
     @SerializedName("releaseYear")
     @Expose
-    private Integer releaseYear;
+    private int releaseYear;
 
     @SerializedName("genre")
     @Expose
@@ -35,11 +39,11 @@ public class Movie {
         return image;
     }
 
-    public Double getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public Integer getReleaseYear() {
+    public int getReleaseYear() {
         return releaseYear;
     }
 

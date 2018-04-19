@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.moviestesthofitmizrahi.MainActivity"
+    tools:context="com.example.user.moviestesthofitmizrahi.activity.MainActivity"
     android:id="@+id/go_main_layout"
-    android:background="@drawable/popcorny">
+    android:background="@drawable/popcorny"
+    android:layoutDirection="ltr">
 
     <ImageView
-        android:id="@+id/go_IV"
+        android:id="@+id/go_image"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="19dp"
         android:src="@drawable/ic_launcher_background" />
 
 </RelativeLayout>

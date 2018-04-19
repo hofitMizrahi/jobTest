@@ -5,7 +5,9 @@ import com.orm.SugarRecord;
 import java.util.List;
 
 /**
- * Database - Movies Table Class By SugarOrm Library
+ * Database
+ *
+ * Class Model - Movies Table Class using SugarOrm Library
  */
 
 public class MoviesTable extends SugarRecord {

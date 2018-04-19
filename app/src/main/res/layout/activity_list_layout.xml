@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr">
 
-
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/myRecyclerView"
         android:layout_width="match_parent"
@@ -14,8 +12,8 @@
 
     <ImageView
         android:id="@+id/addNewQR"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="62dp"
+        android:layout_height="59dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -27,7 +25,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.982" />
-
-
 
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,5 @@
-package com.example.user.moviestesthofitmizrahi.fragments;
+package com.example.user.moviestesthofitmizrahi.adapter;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.user.moviestesthofitmizrahi.DetailsMovieDialog;
+import com.example.user.moviestesthofitmizrahi.activity.DetailsMovieDialog;
 import com.example.user.moviestesthofitmizrahi.R;
 import com.example.user.moviestesthofitmizrahi.moviesDatabase.MoviesTable;
 import com.squareup.picasso.Picasso;
@@ -17,7 +16,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 /**
- * RecyclerView Adapter
+ * Adapter Class - RecyclerView Adapter For Movie List
  */
 
 public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.myViewHolder>{
@@ -52,6 +51,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.myVie
         return moviesArray.size();
     }
 
+
+    // ViewHolder class for the adapter
     public class myViewHolder extends RecyclerView.ViewHolder {
 
         View myView;
@@ -65,14 +66,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.myVie
 
         public void bindMyCityData(MoviesTable movie) {
 
+            //set title
             TextView title = myView.findViewById(R.id.title_TV);
             title.setText(movie.getTitle());
 
-            //image resource
+            //set image resource with Picasso Library
             ImageView imageView = myView.findViewById(R.id.list_image);
 
-            //check if there is any image resource
-
+                //check if there is any image resource
                 String url = movie.getImage();
                 Picasso.with(context)
                         .load(url)
@@ -80,7 +81,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.myVie
                         .centerCrop()
                         .into(imageView);
 
-
+            // User click on item in the list
+            // it will open Screen Three - Details dialog with more information about the movie
             myView.setOnClickListener((View view)->{
 
                 DetailsMovieDialog movieDialog = new DetailsMovieDialog(context, movie);
