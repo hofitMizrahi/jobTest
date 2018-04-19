@@ -6,17 +6,43 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.moviestesthofitmizrahi.activity.MainActivity"
     android:id="@+id/go_main_layout"
-    android:background="@drawable/popcorny"
+    android:background="@drawable/popcover"
     android:layoutDirection="ltr">
 
-    <ImageView
-        android:id="@+id/go_image"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="19dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:layout_marginTop="58dp">
+
+
+        <ImageView
+            android:id="@+id/popcornGoImage"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:src="@drawable/popcornimage" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="47dp"
+            android:text="GO"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

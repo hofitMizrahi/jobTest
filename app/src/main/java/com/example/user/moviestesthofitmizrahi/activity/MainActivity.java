@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 
 import com.example.user.moviestesthofitmizrahi.service.MoviesServiceProvider;
@@ -25,11 +26,11 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            ((ImageView)findViewById(R.id.go_image)).setOnClickListener((View view)->{
+            ((ImageView)findViewById(R.id.popcornGoImage)).setOnClickListener((View view)->{
 
-            moveToSecondScreen();
+                moveToSecondScreen();
 
-        });
+            });
     }
 
     //open the second activity to show ListView of all the movies from the Json file to DB.

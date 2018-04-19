@@ -63,6 +63,9 @@ public class ListActivity extends AppCompatActivity {
                 DetailsMovieDialog movieDialog = new DetailsMovieDialog(this, movie);
                 movieDialog.setDialog();
 
+                }else {
+
+                    Toast.makeText(this, "This movie don't found on your list", Toast.LENGTH_SHORT).show();
                 }
             }
         }
